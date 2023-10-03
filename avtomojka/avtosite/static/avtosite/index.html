@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/static/avtosite/css/adaptive_1280-768.css">
     <link rel="stylesheet" href="/static/avtosite/css/adaptive_768-480.css">
     <link rel="stylesheet" href="/static/avtosite/css/adaptive_480-.css">
+    <link rel="stylesheet" href="/static/avtosite/css/alerts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,6 +42,23 @@
             </li>
         </ul>
     </header>
+<div class="toast active">
+
+  <div class="toast-content">
+    <i class="fas fa-solid fa-check check"></i>
+
+    <div class="message">
+      <span class="text text-1">Success</span>
+      <span class="text text-2">Your changes has been saved</span>
+    </div>
+  </div>
+  <i class="fa-solid fa-xmark close"></i>
+
+  <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+  <div class="progress active"></div>
+</div>
+
+<button>Show Toast</button>
 
     <div class="resize">
         <img src="static/avtosite/img/1.png" alt="" class="car">
@@ -399,6 +417,7 @@
     </footer>
 
 <script src="static/avtosite/scripts/main.js"></script>
+<script src="static/avtosite/scripts/alerts.js"></script>
 
 </body>
 

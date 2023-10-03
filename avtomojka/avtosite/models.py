@@ -66,12 +66,11 @@ class Applications(models.Model):
     Wash = models.ForeignKey('Wash', default=1, on_delete=models.PROTECT, verbose_name="Услуги мойки кузова")
     Salon = models.ForeignKey('Salon', default=1, on_delete=models.PROTECT, verbose_name="Услуги для салона")
     Avto = models.ForeignKey('Avto', default=1, on_delete=models.PROTECT, verbose_name="Автомобиль")
-    Time = models.ForeignKey('Time', default=1, on_delete=models.PROTECT, verbose_name="Время", blank=True, unique=True)
+    Time = models.ForeignKey('Time', default=1, on_delete=models.PROTECT, verbose_name="Время", blank=True)
     HydroShine = models.BooleanField(verbose_name="Hydro Shine")
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     date_update = models.DateField(auto_now=True, blank=True)
-    oio = "хуй"
 
     CHOICES = (
         (date_update, 10),

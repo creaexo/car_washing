@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' fonts.googleapis.com fonts.gstatic.com mc.yandex.ru yandex.ru api-maps.yandex.ru">
     <link rel="stylesheet" href="/static/avtosite/css/style.css">
+    <link rel="stylesheet" href="/static/avtosite/css/adaptive_1600-1280.css">
+    <link rel="stylesheet" href="/static/avtosite/css/adaptive_1280-768.css">
+    <link rel="stylesheet" href="/static/avtosite/css/adaptive_768-480.css">
+    <link rel="stylesheet" href="/static/avtosite/css/adaptive_480-.css">
+    <link rel="stylesheet" href="/static/avtosite/css/alerts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,28 +21,80 @@
 <body>
     <header>
         <ul>
-            <li class="logo"><a href="#">Shinima</a></li>
-            <li class="nav"><a href="#ys">Услуги</a><a href="#ak">Акции</a><a href="#ko">Карта</a></li>
+            <li class="bm">
+                <div id="burger-menu">
+                  <span></span>
+                </div>
+                <div id="menu">
+                    <ul class="oul">
+                      <li><div class="logo"><a href="#" class="close">Shinima</a></div></li>
+                      <li><div class="nav"><a href="#ys" class="close">Услуги</a><a href="#yys" class="close">Акции</a><a href="#ko" class="close">Карта</a></div></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="hl">
+                <div class="logo"><a href="#">Shinima</a></div>
+                <div class="nav"><a href="#ys">Услуги</a><a href="#yys">Акции</a><a href="#ko">Карта</a></div>
+            </li>
             <li class="tp">
                 <p class="t">+7 (343) 290-05-00</p>
                 <p class="p">shinima@gmail.com</p>
             </li>
         </ul>
     </header>
-    <img src="static/avtosite/img/1.png" alt="" class="car">
-    <img src="static/avtosite/img/inf.svg" alt="" class="infg">
-    <img src="static/avtosite/img/2.png" alt="" class="is2" id="ys">
-    <img src="static/avtosite/img/3.png" alt="" class="is3" id="ak">
-    <img src="static/avtosite/img/44.png" alt="" class="is4" id="zap">
+<div class="toast active">
+
+  <div class="toast-content">
+    <i class="fas fa-solid fa-check check"></i>
+
+    <div class="message">
+      <span class="text text-1">Success</span>
+      <span class="text text-2">Your changes has been saved</span>
+    </div>
+  </div>
+  <i class="fa-solid fa-xmark close"></i>
+
+  <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+  <div class="progress active"></div>
+</div>
+
+<button>Show Toast</button>
+
+    <div class="resize">
+        <img src="static/avtosite/img/1.png" alt="" class="car">
+    </div>
+    <div class="resize2">
+        <img src="static/avtosite/img/2.png" alt="" class="is2" id="ys">
+    </div>
+    <div class="resize3">
+        <img src="static/avtosite/img/3.png" alt="" class="is3" id="ak">
+    </div>
+    <div class="resize4">
+        <img src="static/avtosite/img/44.png" alt="" class="is4" id="zap">
+    </div>
+<!--    <img src="static/avtosite/img/inf.svg" alt="" class="infg">-->
+
+
+
     <DIV ID="toTop"><img src="static/avtosite/img/55.svg" alt="" class="is5"></DIV>
     <section class="s1">
         <ul>
             <li class="s1li1">
                 <h2>Автомойка высокого уровня</h2>
-                <p>Мы предлагаем новейшее оборудование<br> и высококачественные средства для<br> очистки вашего
+                <p class="_480">Мы предлагаем новейшее оборудование<br> и высококачественные средства для<br> очистки вашего
                     автомобиля</p>
+                <p class="p480p">Новейшее оборудование и высококачественные средства</p>
             </li>
-            <li></li>
+            <li class="infg_li">
+                <img src="static/avtosite/img/inf.svg" alt="" class="infg">
+            </li>
+            <li class="slider_inf">
+                <div class="slider">
+                    <img src="static/avtosite/img/fast.svg" alt="Image 1" class="active">
+                    <img src="static/avtosite/img/available.svg" alt="Image 2">
+                    <img src="static/avtosite/img/reliable.svg" alt="Image 3">
+                </div>
+            </li>
             <li><a href="#zap">Записаться</a></li>
         </ul>
     </section>
@@ -44,7 +102,7 @@
     <h1 class="s2h2">Услуги</h1>
 </div>
     <section class="s2">
-        <table>
+        <table class="big_table">
             <tr>
                 <th>Услуга</th>
                 <th>Седан, хетчбэк</th>
@@ -96,12 +154,137 @@
                 <td>650</td>
             </tr>
         </table>
+        <table class="mini_table">
+            <tr class="center">
+                <th>Однофазная мойка</th>
+            </tr>
+            <tr>
+                <td>Седан, хетчбэк</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>Кроссовер, универсал</td>
+                <td>660</td>
+            </tr>
+            <tr>
+                <td>Джип</td>
+                <td>720</td>
+            </tr>
+            <tr>
+                <td>LUX-класс, минивен</td>
+                <td>780</td>
+            </tr>
+
+            <tr class="center">
+                <th>Двухфазная мойка<br>с нано-шампунем</th>
+            </tr>
+
+            <tr>
+                <td>Седан, хетчбэк</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>Кроссовер, универсал</td>
+                <td>880</td>
+            </tr>
+            <tr>
+                <td>Джип</td>
+                <td>960</td>
+            </tr>
+            <tr>
+                <td>LUX-класс, минивен</td>
+                <td>1040</td>
+            </tr>
+
+            <tr class="center">
+                <th>Покрытие Hydro Shine</th>
+            </tr>
+
+            <tr>
+                <td>Седан, хетчбэк</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Кроссовер, универсал</td>
+                <td>1100</td>
+            </tr>
+            <tr>
+                <td>Джип</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>LUX-класс, минивен</td>
+                <td>1300</td>
+            </tr>
+
+            <tr class="center">
+                <th>Экспресс мойка</th>
+            </tr>
+            <tr>
+                <td>Седан, хетчбэк</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Кроссовер, универсал</td>
+                <td>550</td>
+            </tr>
+            <tr>
+                <td>Джип</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>LUX-класс, минивен</td>
+                <td>650</td>
+            </tr>
+
+            <tr class="center">
+                <th>Химчистка салона</th>
+            </tr>
+            <tr>
+                <td>Седан, хетчбэк</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>Кроссовер, универсал</td>
+                <td>7700</td>
+            </tr>
+            <tr>
+                <td>Джип</td>
+                <td>8400</td>
+            </tr>
+            <tr>
+                <td>LUX-класс, минивен</td>
+                <td>9100</td>
+            </tr>
+
+            <tr class="center">
+                <th>Уборка салона</th>
+            </tr>
+            <tr>
+                <td>Седан, хетчбэк</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Кроссовер, универсал</td>
+                <td>550</td>
+            </tr>
+            <tr>
+                <td>Джип</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>LUX-класс, минивен</td>
+                <td>650</td>
+            </tr>
+        </table>
     </section>
-    <div class="bbb">
+<div id="yys"></div>
+    <div class="bbb2">
         <h1 class="s3h1">Акции</h1>
     </div>
-
+<div class="center">
     <section class="s3">
+
         <div class="ak">
             <h3>Скидка 15%</h3>
             <ul class="">
@@ -141,7 +324,11 @@
             <a href="#zap">Записаться</a>
         </div>
     </section>
-    <h1 class="s4h1">Запись</h1>
+    </div>
+    <div class="center">
+        <h1 class="s4h1">Запись</h1>
+
+
     <section class="s4">
         <form action="">
             <div class="s4f">
@@ -196,14 +383,17 @@
                             {% endfor -%}
                         </select>
                     </div>
-                    <div class="bbb">
+                    <div class="center">
                         <button>Записаться</button>
                     </div>
+                                    <div class="boo"></div>
                 </div>
+
             </div>
         </form>
 
     </section>
+         </div>
     <section class="s5" id="ko">
         <h1>Карта</h1>
 
@@ -211,48 +401,24 @@
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afe76285b1d85cd63f4cdfd0d0cf244115c0fdf1d52ff97fe38d226300aaa6185&amp;width=100%25&amp;height=80%&amp;lang=ru_RU&amp;scroll=true"></script>
             </section>
 
-
-
+<a id="upbutton" onclick="scrollToTop()" class="up">
+    <img src="static/avtosite/img/55.svg" alt="Top" title="Наверх" >
+</a>
     <footer>
         <ul>
             <li class="rrr"><p class="r1"> пн-пт </p><br>
                 <p class="r2">10:00-22:00</p></li>
-            <li class="nav"><a href="#ys">Услуги</a><a href="#ak">Акции</a><a href="#ko">Карта</a></li>
+            <li class="nav"><a href="#ys">Услуги</a><a href="#yys">Акции</a><a href="#ko">Карта</a></li>
             <li class="tp">
                 <p class="t">+7 (343) 290-05-00</p>
                 <p class="p">shinima@gmail.com</p>
             </li>
         </ul>
     </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script type="text/javascript">
+<script src="static/avtosite/scripts/main.js"></script>
+<script src="static/avtosite/scripts/alerts.js"></script>
 
-        $(function () {
-
-            $(window).scroll(function () {
-
-                if ($(this).scrollTop() != 0) {
-
-                    $('#toTop').fadeIn();
-
-                } else {
-
-                    $('#toTop').fadeOut();
-
-                }
-
-            });
-
-            $('#toTop').click(function () {
-
-                $('body,html').animate({ scrollTop: 0 }, 800);
-
-            });
-
-        });
-
-    </script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/static/avtosite/css/adaptive_1280-768.css">
     <link rel="stylesheet" href="/static/avtosite/css/adaptive_768-480.css">
     <link rel="stylesheet" href="/static/avtosite/css/adaptive_480-.css">
+    <link rel="stylesheet" href="/static/avtosite/css/alerts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,6 +43,7 @@
         </ul>
     </header>
 
+
     <div class="resize">
         <img src="static/avtosite/img/1.png" alt="" class="car">
     </div>
@@ -54,6 +56,9 @@
     <div class="resize4">
         <img src="static/avtosite/img/44.png" alt="" class="is4" id="zap">
     </div>
+<!--    <img src="static/avtosite/img/inf.svg" alt="" class="infg">-->
+
+
 
     <DIV ID="toTop"><img src="static/avtosite/img/55.svg" alt="" class="is5"></DIV>
     <section class="s1">
@@ -306,20 +311,38 @@
     </div>
     <div class="center">
         <h1 class="s4h1">Запись</h1>
+{% if send_mes != 0 %}
+<div class="toast active">
 
+  <div class="toast-content">
+    <i class="fas fa-solid fa-check check"></i>
 
+    <div class="message">
+      <span class="text text-1">Уведомление</span>
+        {% if send_mes == 1 %}
+      <span class="text text-2">Вы успешно записаны</span>
+        {% endif %}
+        {% if send_mes == 2 %}
+      <span class="text text-2">{{ form.Phone.errors }}</span>
+        {% endif %}
+    </div>
+  </div>
+  <i class="fa-solid fa-xmark close_alert">x</i>
+
+  <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+  <div class="progress active"></div>
+</div>
+{% endif %}
     <section class="s4">
         <form action="" method="post" >
                 {% csrf_token %}
             <div class="s4f">
                 <div class="s4fd">
                     <label for="tel">Телефон</label>
-                    {{ form.Phone.errors }}
                     {{ form.Phone }}
 
 
                     <label for="nomer">Госномер</label>
-                    {{ form.Number.errors }}
                     {{ form.Number }}
                     <label for="avto">Авто</label>
                     <div class="select">
@@ -365,6 +388,7 @@
                 </div>
             </div>
         </form>
+
     </section>
          </div>
     <section class="s5" id="ko">
@@ -390,6 +414,7 @@
     </footer>
 
 <script src="static/avtosite/scripts/main.js"></script>
+<script src="static/avtosite/scripts/alerts.js"></script>
 
 </body>
 
