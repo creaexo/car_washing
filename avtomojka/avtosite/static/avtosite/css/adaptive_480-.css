@@ -1,0 +1,247 @@
+
+@media screen and (max-width: 480px) {
+.s1 ul li.slider_inf {
+    margin: 0 0 40px 0px;
+}
+    .s1{
+        top: 110px;
+        height: calc(var(--100vh) - 220px);
+    }
+    .s1 a{
+        margin-top: 60px;
+        border-radius: 50px;
+    }
+    .s1 a:hover{
+        margin-top: 60px;
+        border-radius: 50px;
+    }
+    .s1 ul {
+    justify-content: space-between;
+}
+    .s1 ul li {
+        margin: 20px 0 20px 0;
+    }
+        .infg_li{
+        display: none;
+    }
+    .slider_inf{
+        display: block;
+    }
+            .slider {
+        width: 260px;
+        height: 230px;
+        overflow: hidden;
+        position: relative;
+    }
+        .slider img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+.big_table{
+    display: none;
+}
+    .resize{
+    min-height: 0px;
+}
+    .mini_table{
+        display: table;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    .mini_table tr:not(.center){
+        display: flex;
+        justify-content: space-between;
+    }
+    .mini_table th:first-child{
+        white-space: pre;
+        text-align: center;
+        padding: 0;
+        margin: 20px 0 10px 0;
+        font-size: 22px;
+
+    }
+    .mini_table td{
+        width: 50%;
+        text-align: center;
+    }
+    .mini_table td:last-child, .mini_table td:first-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            padding: 10px 0 10px 0;
+        /*text-align: center;*/
+    }
+    .mini_table td:first-child{
+        padding: 0 0 0 20px;
+        justify-content: flex-start;
+    }
+    .mini_table td:last-child{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .resize3 {
+    margin-top: calc(var(--100vh) + 1403px + 60px);
+}
+    .s3 {
+        top: calc(var(--100vh) + 1403px + 260px);
+    }
+    .bbb2 {
+        top: calc(var(--100vh) + 180px + 1403px);
+    }
+.s3 .ak {
+    width: 300px;
+    height: 420px;
+    border-radius: 40px;
+}
+.resize4 {
+    margin-top: calc(1560px + var(--100vh) + 1403px + 60px);
+}
+    .s4h1 {
+    top: calc(1560px + 120px + var(--100vh) + 1403px + 60px);
+}
+    .s4 {
+    top: calc(1560px + 200px + var(--100vh) + 1403px + 60px);
+}
+
+    .s5, footer {
+    top: calc(1560px + var(--100vh) * 3.65);
+}
+    .select:after {
+        padding-right: 35px;
+    }
+    .hs {
+        bottom: 105px;
+}
+    .hys {
+        font-size: 32px;
+    }
+    form {
+        max-height: 820px;
+        min-height: 820px;
+        height: 820px;
+    }
+    .s4fd button {
+        padding: 0 0 0 0;
+        font-size: 22px;
+        bottom: 30px;
+        right: auto;
+        width: calc(100% - 40px - 60px);
+        height: 52px;
+        border-radius: 30px;
+    }
+    .s4fd button:hover {
+        padding: 0 0 0 0;
+        font-size: 22px;
+        bottom: 30px;
+        right: auto;
+        width: calc(100% - 40px - 60px);
+        height: 52px;
+        border-radius: 30px;
+    }
+
+    .boo {
+    margin-bottom: 100px;
+}
+    .s4fd input, select {
+        margin-bottom: 30px;
+    }
+.s5 {
+    top: calc(var(--100vh) + 1403px + 124px + 1560px + 1024px);
+}
+footer {
+    top: calc(var(--100vh) + 1403px + 124px + 1560px + 1024px + 270px);
+}
+}
+
+@media screen and (max-width: 480px) and (max-height: 900px) {
+        .s1{
+        top: 75px;
+        height: calc(var(--100vh) - 150px);
+    }
+    .p480p{
+        display: block;
+    }
+    ._480{
+        display: none;
+    }
+        .s1 li p {
+    margin: 0 20px;
+}
+        .s1 a{
+    font-size: 28px;
+}
+        .s1 a:hover{
+    font-size: 28px;
+}
+        .slider {
+    width: calc(100vw - 40px);
+    height: 190px;}
+}
+@media screen and (max-width: 400px) {
+
+    .hys {
+        font-size: 24px;
+    }
+    .pere[type="checkbox"] {
+        top: 4px;
+    }
+
+        .s1 li p {
+                font-size: 22px;
+    margin: 0 20px;
+}
+        .s1 li h2 {
+                font-size: 28px;
+}
+.s1 a {
+    font-size: 22px;
+    padding: 18px 40px;
+    filter: drop-shadow(0px 10px 10px #991A1A);
+}
+.s1 a:hover {
+    font-size: 22px;
+    padding: 18px 40px;
+}
+.ak ul li {
+    font-size: 23px;
+}
+.s3 .ak {
+    width: 250px;
+}
+}
+
+@media screen and (max-width: 380px) {
+        .s1 li p {
+                font-size: 20px;
+    margin: 0 20px;
+}
+        .s1 li h2 {
+                font-size: 26px;
+}
+}
+@media screen and (max-width: 350px) {
+        .s1 li p {
+                font-size: 18px;
+    margin: 0 20px;
+}
+        .s1 li h2 {
+                font-size: 24px;
+}
+}
+
+@media screen and (max-width: 480px) and (max-height: 650px) {
+.slider {
+    height: 140px;
+}
+}
